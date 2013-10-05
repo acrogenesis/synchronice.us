@@ -43,7 +43,7 @@
 		color: #fff;
 		font-size: .85em;
 		cursor: pointer;
-    height:50px;
+    height:30px;
 		}
 
 
@@ -63,3 +63,7 @@
 		float: left;
 		width: 80%;
 		}
+
+.fc-agenda-slots > tbody tr{
+  height: 40px;
+}

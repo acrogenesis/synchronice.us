@@ -34,6 +34,7 @@ $(document).ready(function() {
       slotMinutes: 60,
       defaultEventMinutes: 60,
       minTime: '6:00am',
+      height: 900,
       maxTime: '8:00pm',
       columnFormat: {
         week: 'dddd'
@@ -41,7 +42,6 @@ $(document).ready(function() {
       header: {
         right: ''
       },
-      selectable: true,
       editable: true,
       droppable: true,
       drop: function(date, allDay) { // this function is called when something is dropped
@@ -67,6 +67,22 @@ $(document).ready(function() {
 				}
 				
 			}
+    });
+
+    $("#save_calendar").click(function(){
+      car_objects = $("#calendar").fullCalendar("clientEvents");
+
+      console.log(car_objects);
+      $.each(car_objects, function(i,n){
+        hour = $(this).attr("start").getHours() + 1;
+        day = $(this).attr("start").getDay();
+        if(day==0){
+          day=7;
+        }
+        //console.log("On the " + day + "th day you have an " + hour + " a clock apointment");
+        console.log("http://localhost/match/day/"+day+"/hour/"+hour);
+      });
+    
     });
 
 });
