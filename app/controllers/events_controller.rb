@@ -18,7 +18,7 @@ class EventsController < ApplicationController
   def rmevents
 
     @user = current_user
-    @user.events.each do |d|
+    @user.users_events.each do |d|
       d.destroy
     end
     respond_to do |format|
