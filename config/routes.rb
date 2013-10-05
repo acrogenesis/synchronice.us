@@ -1,6 +1,7 @@
 Synchronice::Application.routes.draw do
   root :to=> "pages#homepage"
   match 'auth/:provider/callback', to: 'sessions#create'
+  resources :blocks
   match 'auth/failure', to: redirect('/')
   match 'signout', to: 'sessions#destroy', as: 'signout'
   match 'events', to: 'events#index', as:'events_url'
