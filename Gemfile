@@ -27,7 +27,7 @@ gem "therubyracer"
 gem "twitter-bootstrap-rails"
 
 #fblogin
-gem 'omniauth-facebook'
+gem 'omniauth-facebook', '1.4.0'
 gem 'koala'
 
 #calendar
