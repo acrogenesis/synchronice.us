@@ -34,6 +34,7 @@ $(document).ready(function() {
       slotMinutes: 60,
       defaultEventMinutes: 60,
       minTime: '6:00am',
+      events: "/events.json",
       height: 900,
       maxTime: '8:00pm',
       columnFormat: {
@@ -72,7 +73,11 @@ $(document).ready(function() {
     $("#save_calendar").click(function(){
       car_objects = $("#calendar").fullCalendar("clientEvents");
 
-      console.log(car_objects);
+      $.ajax({
+        url: "http://localhost:3000/events/rm"
+      }).done(function(data){
+        console.log("User previous calendar was sucefully deleted");
+      });
       $.each(car_objects, function(i,n){
         hour = $(this).attr("start").getHours() + 1;
         day = $(this).attr("start").getDay();
