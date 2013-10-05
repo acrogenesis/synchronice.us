@@ -1,8 +1,15 @@
-<script>
-$(document).ready(function(){
-  $("#calendar").dp_calendar({
-    show_end_time: false 
-  });
-});
-</script>
-<div id='calendar'></div>
+<div class="panel panel-default">
+   <div class="panel-body">
+    <% @events.each do |e| %>
+    <% @user.common_friends.each do |f| %>
+        <% if (e.uid == f['uid']) %>
+          You have free time with <%= f['name'] %> right now. Hour: <%= Time.now.hour %>
+          <% @counter = @counter + 1 %>
+        <% end %>
+      <% end %>
+    <% end %>
+    <% if (@counter==0) %>
+     It seems you are not synchroniced with your friends!
+     <% end %>
+  </div>
+</div>

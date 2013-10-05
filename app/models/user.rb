@@ -18,6 +18,8 @@ class User < ActiveRecord::Base
       user.save!
     end
   end
+
+
   def facebook
     @facebook ||= Koala::Facebook::API.new(oauth_token)
     block_given? ? yield(@facebook) : @facebook
@@ -26,6 +28,10 @@ class User < ActiveRecord::Base
     nil # or consider a custom null object
   end
 
+  def common_friends
+    facebook { |fb| fb.fql_query("SELECT name,mutual_friend_count,pic,uid FROM user WHERE uid IN(SELECT uid2 FROM friend WHERE uid1=me()) AND is_app_user") }
+  end
+  
   def friends_count
     facebook { |fb| fb.get_connection("me", "friends").size }
   end

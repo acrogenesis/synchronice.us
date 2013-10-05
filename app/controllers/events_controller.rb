@@ -12,7 +12,8 @@ class EventsController < ApplicationController
 
     @event = Event.where("weekday_id = ? AND day_hour = ?", @day, @hour)
     @user = current_user
-    @user.events << @event
+    @u = UsersEvents.create!(:user_id => @user.id, :event_id => @event[0].id, :uid => @user.uid)
+    @u.save
   end
   
   def rmevents
