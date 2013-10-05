@@ -142,8 +142,8 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
-  hirb
   fullcalendar-rails
+  hirb
   jquery-rails
   koala
   omniauth-facebook (= 1.4.0)
