@@ -22,9 +22,6 @@
       <% if current_user %>
         <li><p class="navbar-text special-navbar-text">Welcome <strong><%= current_user.name %></strong></p></li>
         <li><%= link_to "Log out", signout_path, :id=>"sign_out" %></li>
-      <% else %>
-        <li><p class="navbar-text special-navbar-text">Start using SynchroNice</p></li>
-        <li><%= link_to "Login with Faecbook","/auth/facebook", :id=>"sign_in" %></li>
       <% end %>
     </ul>
   </div>
