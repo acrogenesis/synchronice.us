@@ -1,8 +1,8 @@
 class User < ActiveRecord::Base
   attr_accessible :name, :oauth_expires_at, :oauth_token, :provider, :uid, :pic, :calendar
   
-  has_many :users_blocks, :class=>"UsersBlocks" 
-  has_many :users_events, :class=>"UsersEvents"
+  has_many :users_blocks, :class_name=>"UsersBlocks" 
+  has_many :users_events, :class_name=>"UsersEvents"
   has_many :events, :through=>:users_events
   has_many :blocks, :through=>:users_blocks
 
