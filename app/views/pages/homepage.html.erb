@@ -1,5 +1,5 @@
  <!-- Main jumbotron for a primary marketing message or call to action -->
-<div class="jumbotron">
+<div class="jumbotron boot-purple">
   <div class="container">
   <h1>
     Synchronice.us
@@ -8,9 +8,9 @@
     Synchronice your free time with your friends
   </p>
   <p>
-            <% unless current_user %>
-              <%= link_to "Login with Faecbook","/auth/facebook", :class=>"btn btn-primary btn-lg", :id=>"sign_in" %>
-            <% end %>
+    <% unless current_user %>
+      <a href="/auth/facebook" class="btn btn-primary btn-lg" id="sign_in"><span class='icon-facebook'></span>&nbsp;&nbsp;&nbsp;Login with Facebook</a>
+    <% end %>
   </p>
   </div>
 </div>
@@ -25,9 +25,7 @@
         Are you new?  Get started
         making your own
         schedule of the day
-      </p>
-      <p>
-        <a class="btn btn-default" href="#">View details »</a>
+        <img src="/assets/dragdrop-small.jpg">
       </p>
     </div>
     <div class="col-md-4">
@@ -38,9 +36,7 @@
         Have already a Schedule import
          yours here to get a faster start on
         your journey
-      </p>
-      <p>
-        <a class="btn btn-default" href="#">View details »</a>
+        <img height="154" width="148" src="/assets/Google.png">
       </p>
     </div>
     <div class="col-md-4">
@@ -51,10 +47,8 @@
         Are your friends are synced?
         Check who you
          share free time  with.
-        let’s chat, let’s eat, let’s SynchroNice
-      </p>
-      <p>
-        <a class="btn btn-default" href="#">View details »</a>
+         let’s chat, let’s eat, let’s SynchroNice
+         <img height="154" width="265" src="/assets/3.jpg">
       </p>
     </div>
   </div>
