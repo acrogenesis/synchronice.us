@@ -1,35 +1,5 @@
 <div class="container">
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="#">Synchronice</a>
-  </div>
-  <div class="navbar-collapse collapse">
-    <ul class="nav navbar-nav">
-      <li class="active">
-        <a href="#">Home</a>
-      </li>
-      <li>
-        <a href="#about">About</a>
-      </li>
-      <li>
-        <a href="#contact">Contact</a>
-      </li>
-    </ul>
-    <div class="navbar-right">
-      <% if current_user %>
-        <label>Welcome <%= current_user.name %></label>
-        <%= link_to "Log out", signout_path, :class=>"btn btn-success", :id=>"sign_out" %>
-      <% else %>
-        <label>Start using SynchroNice</label>
-        <%= link_to "Login with Faecbook","/auth/facebook", :class=>"btn btn-success", :id=>"sign_in" %>
-      <% end %>
-     
-    </div>
-  </div>
+  <%= render 'header' %>
   <!--/.navbar-collapse -->
   </div>
   </div>
@@ -37,10 +7,10 @@
   <div class="jumbotron">
   <div class="container">
   <h1>
-    Synchronice.us
+    SynchroNice.us
   </h1>
   <p>
-    Synchronice your free time with your friends
+    SynchroNice your free time with your friends
   </p>
   <p>
     <a class="btn btn-primary btn-lg">Learn more »</a>
@@ -96,7 +66,7 @@
     <hr>
     <footer>
       <p>
-        © Synchronice 2013
+        © SynchroNice 2013
       </p>
     </footer>
   </div>
