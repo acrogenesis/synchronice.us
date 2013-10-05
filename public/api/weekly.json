@@ -1,32 +1,9 @@
 [
-  { "monday":{
-        "bloques": 3
-    }
-  },
-  {"tuesdy": {
-        "bloques": 1
-    }
-  },
-  {"wednesday": {
-        "bloques": 9
-    }
-  },
-  {
-    "thursday": {
-        "bloques": 11
-    }
-  },
-  {"friday": {
-        "bloques": 2
-    }
-  },
-  {
-    "saturday": {
-        "bloques": 11
-    }
-  },
-  {"sunday": {
-        "bloques": 2
-    }
-  }
+  {"monday":"3"},
+  {"tuesday": "8"},
+  {"wednesday": "1"},
+  {"thursday": "0"},
+  {"friday": "10"},
+  {"saturday": "5"},
+  {"sunday": "6"}
 ]
