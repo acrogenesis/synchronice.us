@@ -1,31 +1,31 @@
 [
-  { "01":{
+  { "monday":{
         "bloques": 3
     }
   },
-  {"02": {
+  {"tuesdy": {
         "bloques": 1
     }
   },
-  {"03": {
+  {"wednesday": {
         "bloques": 9
     }
   },
   {
-    "04": {
+    "thursday": {
         "bloques": 11
     }
   },
-  {"05": {
+  {"friday": {
         "bloques": 2
     }
   },
   {
-    "06": {
+    "saturday": {
         "bloques": 11
     }
   },
-  {"07": {
+  {"sunday": {
         "bloques": 2
     }
   }
