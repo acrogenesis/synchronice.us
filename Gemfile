@@ -8,7 +8,6 @@ gem 'hirb'
 
 gem 'sqlite3'
 
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -21,7 +20,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
+gem 'jquery-ui-rails'
 #fblogin
 gem 'omniauth-facebook', '1.4.0'
 gem 'koala'

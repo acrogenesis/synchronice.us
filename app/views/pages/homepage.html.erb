@@ -1,38 +1,4 @@
-<div class="container">
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="#">Synchronice</a>
-  </div>
-  <div class="navbar-collapse collapse">
-    <ul class="nav navbar-nav">
-      <li class="active">
-        <a href="#">Home</a>
-      </li>
-      <li>
-        <a href="#about">About</a>
-      </li>
-      <li>
-        <a href="#contact">Contact</a>
-      </li>
-    </ul>
-    <div class="navbar-right">
-      <% if current_user %>
-        <label>Welcome <%= current_user.name %></label>
-        <%= link_to "Log out", signout_path, :class=>"btn btn-success", :id=>"sign_out" %>
-      <% else %>
-        <label>Start using SynchroNice</label>
-        <%= link_to "Login with Faecbook","/auth/facebook", :class=>"btn btn-success", :id=>"sign_in" %>
-      <% end %>
-     
-    </div>
-  </div>
-  <!--/.navbar-collapse -->
-  </div>
-  </div>
+
   <!-- Main jumbotron for a primary marketing message or call to action -->
   <div class="jumbotron">
   <div class="container">
@@ -43,7 +9,9 @@
     Synchronice your free time with your friends
   </p>
   <p>
-    <a class="btn btn-primary btn-lg">Learn more »</a>
+            <% unless current_user %>
+              <%= link_to "Login with Faecbook","/auth/facebook", :class=>"btn btn-primary btn-lg", :id=>"sign_in" %>
+            <% end %>
   </p>
   </div>
   </div>
@@ -94,10 +62,6 @@
       </div>
     </div>
     <hr>
-    <footer>
-      <p>
-        © Synchronice 2013
-      </p>
-    </footer>
+
   </div>
   <!-- /container -->
