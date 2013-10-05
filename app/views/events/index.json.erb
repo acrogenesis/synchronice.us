@@ -1,0 +1,16 @@
+[
+<% @counter = 0 %>
+<% @events.each do |e| %>
+    
+    {
+     "id": <%= e.id %>,
+     "start": "<%= e.simulated_date %>",
+     "title" : "Evento",
+     "allDay" : false
+     }
+     <% if (@counter!=@events.count-1) %>
+     ,
+   <% end %>
+   <% @counter = @counter + 1 %>
+ <% end %>
+]
