@@ -3,7 +3,7 @@ class Event < ActiveRecord::Base
 
   belongs_to :weekday
 
-  has_many :users_events, :class=>"UsersEvents"
+  has_many :users_events, :class_name=>"UsersEvents"
   has_many :users, :through=>:users_events
 
 
