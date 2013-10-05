@@ -1,8 +1,103 @@
-<div id="user_nav">
-  <% if current_user %>
-    Signed in as <strong><%= current_user.name %></strong>!
-    <%= link_to "Sign out", signout_path, id: "sign_out" %>
-  <% else %>
-    <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
-  <% end %>
-</div>
+<div class="container">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">Synchronice</a>
+  </div>
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+      <li class="active">
+        <a href="#">Home</a>
+      </li>
+      <li>
+        <a href="#about">About</a>
+      </li>
+      <li>
+        <a href="#contact">Contact</a>
+      </li>
+    </ul>
+    <div class="navbar-right">
+      <% if current_user %>
+        <label>Welcome <%= current_user.name %></label>
+        <%= link_to "Log out", signout_path, :class=>"btn btn-success", :id=>"sign_out" %>
+      <% else %>
+        <label>Start using SynchroNice</label>
+        <%= link_to "Login with Faecbook","/auth/facebook", :class=>"btn btn-success", :id=>"sign_in" %>
+      <% end %>
+     
+    </div>
+  </div>
+  <!--/.navbar-collapse -->
+  </div>
+  </div>
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron">
+  <div class="container">
+  <h1>
+    Synchronice.us
+  </h1>
+  <p>
+    Synchronice your free time with your friends
+  </p>
+  <p>
+    <a class="btn btn-primary btn-lg">Learn more »</a>
+  </p>
+  </div>
+  </div>
+  <div class="container">
+  <!-- Example row of columns -->
+  <div class="row">
+  <div class="col-md-4">
+    <h2>
+      Draw your calendar
+    </h2>
+    <p>
+      Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus
+      ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo
+      sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed
+      odio dui.
+    </p>
+    <p>
+      <a class="btn btn-default" href="#">View details »</a>
+    </p>
+  </div>
+  <div class="col-md-4">
+    <h2>
+      Import your calendar
+    </h2>
+    <p>
+      Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus
+      ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo
+          sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed
+          odio dui.
+        </p>
+        <p>
+          <a class="btn btn-default" href="#">View details »</a>
+        </p>
+      </div>
+      <div class="col-md-4">
+        <h2>
+          Eat with friends
+        </h2>
+        <p>
+          Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas
+          eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus,
+          tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum
+          massa justo sit amet risus.
+        </p>
+        <p>
+          <a class="btn btn-default" href="#">View details »</a>
+        </p>
+      </div>
+    </div>
+    <hr>
+    <footer>
+      <p>
+        © Synchronice 2013
+      </p>
+    </footer>
+  </div>
+  <!-- /container -->
