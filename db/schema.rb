@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131005022312) do
+ActiveRecord::Schema.define(:version => 20131005051931) do
 
   create_table "events", :force => true do |t|
     t.datetime "start"
@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(:version => 20131005022312) do
     t.datetime "oauth_expires_at"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
+    t.string   "pic"
+    t.boolean  "calendar"
   end
 
 end
