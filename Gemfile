@@ -31,6 +31,9 @@ gem "twitter-bootstrap-rails"
 gem 'omniauth-facebook', '1.4.0'
 gem 'koala'
 
+#calendar
+gem 'fullcalendar-rails'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
