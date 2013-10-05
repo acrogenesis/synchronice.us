@@ -33,5 +33,18 @@ a.each_with_index do |timeblock, index|
   puts "#{a[index]} #{daynumber}\n"  
   Event.create do |e|
     e.weekday_id = daynumber
+    dayhour = index%24
+    e.day_hour = dayhour + 1
+
   end
+  
+  Block.create do |b|
+    b.weekday_id = daynumber
+    dayhour = index%24
+    b.day_hour = dayhour + 1
+  end
+
 end
+
+
+
