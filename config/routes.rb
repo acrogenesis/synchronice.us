@@ -7,6 +7,7 @@ Synchronice::Application.routes.draw do
   match 'events', to: 'events#index', as:'events_url'
   match 'events/day/:day/hour/:hour', to: 'events#addevents'
   match 'events/rm', to: 'events#rmevents'
+  match 'sync', to: 'blocks#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
