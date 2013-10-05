@@ -11,7 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131005063359) do
+ActiveRecord::Schema.define(:version => 20131005073042) do
+
+  create_table "blocks", :force => true do |t|
+    t.integer  "weekday_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "events", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -29,6 +35,18 @@ ActiveRecord::Schema.define(:version => 20131005063359) do
     t.datetime "updated_at",       :null => false
     t.string   "pic"
     t.boolean  "calendar"
+  end
+
+  create_table "users_blocks", :force => true do |t|
+    t.integer "user_id"
+    t.integer "event_id"
+    t.string  "uid"
+  end
+
+  create_table "users_events", :force => true do |t|
+    t.integer "user_id"
+    t.integer "event_id"
+    t.string  "uid"
   end
 
   create_table "weekdays", :force => true do |t|
