@@ -5,6 +5,7 @@ Synchronice::Application.routes.draw do
   match 'signout', to: 'sessions#destroy', as: 'signout'
   match 'events', to: 'events#index', as:'events_url'
   match 'events/day/:day/hour/:hour', to: 'events#addevents'
+  match 'events/rm', to: 'events#rmevents'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
