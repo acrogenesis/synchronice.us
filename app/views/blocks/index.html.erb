@@ -2,14 +2,12 @@
    <div class="panel-body">
     <% @events.each do |e| %>
     <% @user.common_friends.each do |f| %>
-        <% if (e.uid == f['uid']) %>
-          You have free time with <%= f['name'] %> right now. Hour: <%= Time.now.hour %>
-          <% @counter = @counter + 1 %>
+        <% if (e.uid == f['uid'].to_s) %>
+          <p><h2><%=Time.now.hour-5%> hours</h2>
+		<p><img src="<%= f['pic'] %>" alt="..." class="img-thumbnail">
+		 <%= f['name'] %></p></p>
         <% end %>
       <% end %>
     <% end %>
-    <% if (@counter==0) %>
-     It seems you are not synchroniced with your friends!
-     <% end %>
   </div>
 </div>

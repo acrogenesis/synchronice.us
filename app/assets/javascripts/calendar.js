@@ -73,11 +73,6 @@ $(document).ready(function() {
     $("#save_calendar").click(function(){
       car_objects = $("#calendar").fullCalendar("clientEvents");
 
-      $.ajax({
-        url: "http://localhost:3000/events/rm"
-      }).done(function(data){
-        console.log("User previous calendar was sucefully deleted");
-      });
       $.each(car_objects, function(i,n){
         hour = $(this).attr("start").getHours() + 1;
         day = $(this).attr("start").getDay();
@@ -85,7 +80,7 @@ $(document).ready(function() {
           day=7;
         }
         //console.log("On the " + day + "th day you have an " + hour + " a clock apointment");
-        url_event = "http://localhost:3000/events/day/"+day+"/hour/"+hour;
+        url_event = "http://synchronice.us/events/day/"+day+"/hour/"+hour;
         $.ajax({
           url: url_event
         }).done(function(data){
